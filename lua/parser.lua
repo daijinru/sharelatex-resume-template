@@ -44,7 +44,14 @@ function printProjItems(file)
   for key, value in pairs(json) do
     tex.print("\\resumeSubItem")
     tex.print("{" .. value["title"] .. "}")
-    tex.print("{" .. value["description"] .. "}")
+    tex.print("{" .. value["company"] .. "}")
+
+    tex.print("\\resumeItemListStart")
+    for key, value in pairs(value["descriptions"]) do
+      tex.print("\\resumeItem")
+      tex.print("{" .. value["description"] .. "}")
+    end
+    tex.print("\\resumeItemListEnd")
   end
 end
 
