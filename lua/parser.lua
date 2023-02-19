@@ -49,6 +49,10 @@ function printProjItems(file)
     tex.print("{" .. value["team"] .. "}")
     tex.print("{" .. value["time_duration"] .. "}")
 
+    tex.print("\\vspace{-1pt}")
+    tex.print("\\small")
+    tex.print("{" .. value["description"] .. "}")
+
     tex.print("\\resumeItemListStart")
     for key, value in pairs(value["descriptions"]) do
       tex.print("\\resumeItem")
