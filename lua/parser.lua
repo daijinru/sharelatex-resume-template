@@ -55,7 +55,7 @@ function printProjItems(file)
 
     tex.print("\\resumeItemListStart")
     for key, value in pairs(value["descriptions"]) do
-      tex.print("\\resumeItem")
+      tex.print("\\resumeSimpleItem")
       tex.print("{" .. value["title"] .. "}")
       tex.print("{" .. value["description"] .. "}")
     end
